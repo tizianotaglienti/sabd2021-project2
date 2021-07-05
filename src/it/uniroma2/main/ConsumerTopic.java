@@ -47,7 +47,7 @@ public class ConsumerTopic{
 
         // creo il consumer usando le prop
         prop = KafkaHandler.getProperties("csv_output");
-        final Consumer<Long, String> consumerWeek = new KafkaConsumer<>(prop);
+        Consumer<Long, String> consumerWeek = new KafkaConsumer<>(prop);
         //final Consumer<Long, String> consumerMonth = new KafkaConsumer<>(prop);
 
         // sottoscrivo il consumer al topic
